@@ -1,0 +1,130 @@
+/*!
+Theme Name: portfolio
+Theme URI: http://underscores.me/
+Author: Underscores.me
+Author URI: http://underscores.me/
+Description: Description
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: portfolio
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+*/
+
+
+.grid {
+	height: 99vh;
+	display: grid;
+	grid-template-columns: 20% 1fr 10%;
+	grid-template-rows: 15% 1fr 15%;
+}
+
+body {
+	margin: 30px;
+	background-color: #F2F2F2;
+}
+.left-top {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;	
+}
+
+h1, h2 {
+	margin: 0;
+	font-family: 'SF-semibold';
+	text-transform: uppercase;
+	font-size: 1em;
+	color: #FF4538;
+}
+
+.left-top > div > h1 {
+	padding-bottom: 15px;
+	padding-left: 15px;
+}
+
+.left-top > div > h2 {
+	padding-bottom: 15px;
+	padding-left: 15px;
+}
+
+.center-bottom > div > h2 {
+	padding-top: 15px;
+	padding-right: 15px;
+}
+
+.right-top > div > h2 {
+	padding-bottom: 15px;
+	padding-right: 15px;
+}
+
+.center-center {
+	border: 1px solid #FF4538;
+	display: flex;
+	align-items: center;
+	padding: 15px;
+}
+
+.center-top, .center-bottom {
+	border-left: 1px solid #FF4538;	
+	border-right: 1px solid #FF4538;	
+}
+
+.left-center, .right-center {
+	border-top: 1px solid #FF4538;
+	border-bottom: 1px solid #FF4538;
+	
+}
+
+.left-top, .left-center, .left-bottom {
+	border-left: 1px solid #FF4538;	
+}
+
+.right-top, .right-center, .right-bottom {
+	border-right: 1px solid #FF4538;	
+}
+
+
+@font-face {
+	font-family: 'SF-semibold';
+	src: url(type/SF-UI-Display/SF-UI-Display-Semibold.otf);
+  }
+
+
+
+.center-center > div {
+	height: 100%;
+}
+
+svg {
+	height: inherit;
+
+}
+
+.center-bottom {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	justify-content: space-between;
+}
+
+.mail {
+	text-decoration: none;
+	color: #FF4538;
+}
+
+.mail:hover {
+	text-decoration: line-through;
+}
+
+#wpadminbar {
+	display: none;
+}
+
+.right-top {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	justify-content: flex-end;
+	text-align: right;
+
+}
