@@ -13,15 +13,24 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 
 
 .grid {
-	height: 99vh;
+	height: 90vh;
 	display: grid;
 	grid-template-columns: 20% 1fr 10%;
 	grid-template-rows: 15% 1fr 15%;
 }
-
 body {
 	margin: 30px;
 	background-color: #F2F2F2;
+	position: relative;
+	overflow: hidden;
+}
+.left-top,
+.center-center,
+.left-center,
+.right-top,
+.left-bottom,
+.center-bottom {
+	z-index: 10;
 }
 .left-top {
 	display: flex;
@@ -57,6 +66,11 @@ h1, h2 {
 	padding-right: 15px;
 }
 
+.left-center > div > h2 {
+	padding-bottom: 15px;
+	padding-left: 15px;
+}
+
 .center-center {
 	border: 1px solid #FF4538;
 	display: flex;
@@ -82,22 +96,13 @@ h1, h2 {
 .right-top, .right-center, .right-bottom {
 	border-right: 1px solid #FF4538;	
 }
-
-
 @font-face {
 	font-family: 'SF-semibold';
 	src: url(type/SF-UI-Display/SF-UI-Display-Semibold.otf);
   }
 
-
-
 .center-center > div {
 	height: 100%;
-}
-
-svg {
-	height: inherit;
-
 }
 
 .center-bottom {
@@ -127,4 +132,27 @@ svg {
 	justify-content: flex-end;
 	text-align: right;
 
+}
+
+svg {
+	height: 100%;
+}
+.is__none {
+	display: none;
+	z-index: 1;
+}
+.is__img__lost {
+	position: absolute;
+	height: 400px;
+	z-index: 1;
+
+}
+.is__img__lost > img {
+	opacity: 0.5;
+	height: 100%;
+}
+
+.left-center {
+	display: flex;
+	align-items: flex-end;
 }
