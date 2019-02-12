@@ -35,7 +35,7 @@ get_header();
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-	<h1 class="coucou">Coucou</h1>
+
 
 <?php
 get_sidebar();

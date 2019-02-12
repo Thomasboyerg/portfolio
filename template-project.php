@@ -67,7 +67,11 @@ get_header();
 		</div>
 	</section>
 	<section class="right-center"></section>
-	<section class="left-bottom"></section>
+	<section class="left-bottom">
+		<div>
+			<h2><a class="mail" href="http://localhost:8888/wordpress/contact/" target="_blank">Contact</a></h2>
+		</div>
+	</section>
 	<section class="center-bottom">
 		<div>
 			<h2><a class="mail" href="mailto:thomas.boyer.gibaud@gmail.com">thomas.boyer.gibaud@gmail.com</a></h2>

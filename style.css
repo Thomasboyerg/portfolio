@@ -71,6 +71,11 @@ h1, h2 {
 	padding-left: 15px;
 }
 
+.left-bottom > div > h2 {
+	padding-top: 15px;
+	padding-left: 15px;
+}
+
 .center-center {
 	border: 1px solid #FF4538;
 	display: flex;
@@ -131,12 +136,12 @@ h1, h2 {
 	align-items: flex-end;
 	justify-content: flex-end;
 	text-align: right;
-
 }
 
 svg {
 	height: 100%;
 }
+
 .is__none {
 	display: none;
 	z-index: 1;
@@ -155,4 +160,38 @@ svg {
 .left-center {
 	display: flex;
 	align-items: flex-end;
+}
+
+.left-bottom {
+	display: flex;
+	align-items: flex-start;
+}
+
+
+@media screen and (max-width: 950px) {
+	.grid {
+		grid-template: 1fr 2fr 1fr / 1fr 2fr;
+	}
+
+	.center-top, .left-center, .right-center, .right-bottom {
+		display: none;
+	}
+
+	.left-bottom {
+		grid-row: 3/-1;
+		grid-column: 1/2;
+	}
+
+	.center-bottom {
+		grid-column: 2/-1;
+		grid-row: 3/-1;
+	}
+
+	.rotate {
+		transform: rotate(90deg);
+	}
+
+	.center-center {
+		grid-column: 1/-1;
+	}
 }

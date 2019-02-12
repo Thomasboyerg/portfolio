@@ -65,23 +65,25 @@ const addProjectTitle = (array, element) => {
 /**
  * Éxecution
  */
-svgElement.forEach(element => {
-    element.addEventListener("mouseover", () => {
-        element.querySelector("path").style.fill = "#ff4538";
-        divImg.classList.remove("is__none");
-        divImg.classList.add("is__img__lost");
-        setPosition(divImg);
-        addProjectTitle(projectTab, element);
-        divImg.innerHTML = `
-        <img src="http://localhost:8888/wordpress/wp-content/uploads/2019/01/${element.className.baseVal}.png"/>`;
-    });
-}); 
-svgElement.forEach(element => {
-    element.addEventListener("mouseout", () => {
-        element.querySelector("path").style.fill = "";
-        colonneLeftCenter.innerHTML = "";
-        divImg.innerHTML = "";
-        divImg.classList.add("is__none");
-        divImg.classList.remove("is__img__lost");
-    });
-});
+    if (window.innerWidth >= 950) {
+        svgElement.forEach(element => {
+            element.addEventListener("mouseover", () => {
+                element.querySelector("path").style.fill = "#ff4538";
+                divImg.classList.remove("is__none");
+                divImg.classList.add("is__img__lost");
+                setPosition(divImg);
+                addProjectTitle(projectTab, element);
+                divImg.innerHTML = `
+                <img src="http://localhost:8888/wordpress/wp-content/uploads/2019/01/${element.className.baseVal}.png"/>`;
+            });
+        }); 
+        svgElement.forEach(element => {
+            element.addEventListener("mouseout", () => {
+                element.querySelector("path").style.fill = "";
+                colonneLeftCenter.innerHTML = "";
+                divImg.innerHTML = "";
+                divImg.classList.add("is__none");
+                divImg.classList.remove("is__img__lost");
+            });
+        });   
+    }
